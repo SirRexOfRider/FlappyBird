@@ -211,11 +211,12 @@ while run:
             and bird_group.sprites()[0].rect.right < pipe_group.sprites()[0].rect.right\
             and pass_pipe == False:
             pass_pipe = True
+            
         if pass_pipe == True:
             if bird_group.sprites()[0].rect.left > pipe_group.sprites()[0].rect.right:
                 score += 1
                 pass_pipe = False
-                
+
     #Put the score at the top of the screen
     draw_text(str(score), font, white, int(screen_width / 2), 20)
 
